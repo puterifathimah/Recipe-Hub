@@ -1,0 +1,236 @@
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent box model */
+  }
+
+  header, nav ul li a, .hero h1, .hero p, footer {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px 5px;
+    height: 50px; /* Adjust the height as needed */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin: 0;
+  }
+  
+  .logo p {
+    margin: 0;
+    font-size: 12px;
+    color: #7f8c8d;
+  }
+  
+  .logo-img {
+    width: 90px; /* Adjust to your desired width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+    /* Navigation bar styling */
+  nav {
+    display: flex;
+    flex: 1; /* Allow nav to take remaining space */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0 auto; /* Center the links */
+      padding: 0;
+      justify-content: center;
+  }
+  
+  nav ul li {
+      margin: 0 15px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #34495e;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    color: #e67e22;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto; /* Push the search bar and icon to the far right */
+  }
+  
+  /* Align search input and user icon to the right */
+  nav input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f4caa6;
+    color: #333;
+    margin-right: 10px; /* Space between search and user icon */
+    width: 200px; /* Set a fixed width for the search input */
+}
+/* User dropdown styling */
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .user-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%; /* Circular icon */
+    display: block;
+  }
+  
+  /* Dropdown content */
+  .dropdown-content {
+    display: none; /* Hidden initially */
+    position: absolute;
+    top: 100%; /* Position below the icon */
+    right: 0; /* Align to the right edge */
+    background-color: white;
+    min-width: 150px; /* Dropdown width */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Adds shadow */
+    z-index: 1000; /* Ensure it's on top */
+    border-radius: 5px;
+    overflow: hidden;
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+    opacity: 0; /* Initially invisible */
+    visibility: hidden; /* Prevent interaction */
+  }
+  
+  .dropdown-content a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-size: 14px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ffbc6a;
+  }
+  
+  /* Show dropdown on hover */
+  .user-dropdown:hover .dropdown-content {
+    display: block; /* Make dropdown visible */
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Allow interaction */
+  }
+
+  .hero {
+    text-align: center;
+    padding: 0;
+    background-image: url('../images/b1.png'); /* Replace with your actual image path */
+    background-size: cover; /* Makes the image cover the entire section */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center; /* Centers the image */
+    height: 60vh; /* Sets the section height to the full viewport height */
+    width: 100%; /* Ensures full width of the page */
+    display: flex; /* Centers content */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-text {
+    background: rgba(0, 0, 0, 0.296);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin: 0;
+    color: #ffffff; /* white text */
+  }
+  
+  .hero p {
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 1.5;
+    color: #ffffff; /* white text */
+  }
+  
+main {
+padding: 0;
+}
+
+.welcome-section h1 {
+font-size: 24px;
+}
+
+.welcome-section p {
+color: #666;
+}
+
+.quick-access {
+margin-top: 20px;
+}
+
+.quick-access h2 {
+margin-bottom: 10px;
+}
+
+.quick-access-items {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+gap: 20px;
+}
+
+.quick-access-item {
+text-align: center;
+}
+
+.quick-access-item img {
+max-width: 70px;
+}
+
+  footer {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+  }
+
+  .scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    cursor: pointer; /* Change cursor to pointer for better UX */
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+  }
+
+  .scroll-top img {
+    width: 80%; /* Make the image fill the button */
+    height: 80%; /* Maintain aspect ratio */
+    display: block; /* Prevent inline image spacing issues */
+    border-radius: 30%; /* Optional: make the button circular */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a shadow for better visibility */
+  }
+
+  .scroll-top img:hover {
+    transform: scale(1.1); /* Optional: Add a hover effect */
+    transition: transform 0.3s ease;
+  }
